@@ -1,0 +1,31 @@
+::ng-deep.custom-wrap-dialog-container {
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: 15px;
+  }
+}
+
+.wrap {
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+th,
+td {
+  border-right: 1px solid #000;
+  &:last-child,
+  &:last-child {
+    border-right: none;
+  }
+}
+
+thead {
+  background-color: rgba(127, 255, 212, 0.25);
+}
+
+tr:nth-child(even) {
+  background-color: rgba(127, 255, 212, 0.25);
+}

@@ -1,0 +1,36 @@
+<section class="wrap">
+  <input
+    name="search"
+    [(ngModel)]="search"
+    type="text"
+    placeholder="Search user"
+    (keyup)="onSearch()"
+  />
+  @if(filteredUsers.length){
+
+  <table>
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>COMPANY</th>
+        <th>DETAILS</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(user of filteredUsers; track user.id){
+      <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.company.name }}</td>
+        <td>
+          <button type="button" (click)="onDetails(user)">Details</button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  } @else {
+  <p>Not found results</p>
+  }
+</section>
