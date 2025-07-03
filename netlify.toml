@@ -1,5 +1,5 @@
 [build]
-command = "ng build --configuration production && ng run ukrposhta:server:production"
+command = "ng build --configuration production && ng run Ukrposhta:server:production"
 publish = "dist/ukrposhta/browser"
 
 [[plugins]]
