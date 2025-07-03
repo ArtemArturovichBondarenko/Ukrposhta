@@ -1,6 +1,8 @@
 [build]
-command = "ng build --configuration production && ng run Ukrposhta:server:production"
+command = "ng build --configuration production"
 publish = "dist/ukrposhta/browser"
 
-[[plugins]]
-package = "@netlify/angular-runtime"
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
